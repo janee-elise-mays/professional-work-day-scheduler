@@ -21,10 +21,10 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
-.custom-jumbotron{
+/* .custom-jumbotron{
   background-color: var(--white);
   color: var(--black);
-}
+} */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -49,7 +49,7 @@ textarea{
   width: 100%;
 }
 
-.hour {
+#hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
