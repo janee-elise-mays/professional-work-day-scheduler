@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="style" href=".assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <span id="currentDay" class="lead"></span>
-    </header>
-    <div class="container">
-      <div id = time-slot-1></div>
-        <div id = time-slot-2></div>
-          <div id = time-slot-3></div>
-            <div id = time-slot-4></div>
-              <div id = time-slot-5></div>
-                <div id = time-slot-6></div>
-                  <div id = time-slot-7></div>
-                    <div id = time-slot-8></div>
-                      <div id = time-slot-9></div>
-                        <div id = time-slot-10></div>
-                          <div id = time-slot-11></div>
-                            <div id = time-slot-12></div>
-                              <div id = time-slot-13></div>
-                                <div id = time-slot-14></div>
-                                  <div id = time-slot-15></div>
-                                    <div id = time-slot-16></div>
-                                      <div id = time-slot-17></div>
-      <!-- Timeblocks go here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="style" href=".assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <span id="currentDay" class="lead"></span>
+  </header>
+  <div class="container">
+    <div id=time-slot-1 class="row time-block">
+      9AM
+      <textarea row="1"></textarea>
+      <button class="saveBtn"></button>
     </div>
+    <div id=time-slot-2 class="row hour">
+      10AM
+      <textarea row="2"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-3 class="row hour">
+      11AM
+      <textarea row="3"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-4 class="row hour">
+      12PM
+      <textarea row="4"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-5 class="row hour">
+      1PM
+      <textarea row="5"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-6 class="row hour">
+      2PM
+      <textarea row="6"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-7 class="row hour">
+      3PM
+      <textarea row="7"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-8 class="row hour">
+      4PM
+      <textarea row="8"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+    <div id=time-slot-9 class="row hour">
+      5PM
+      <textarea row="9"></textarea>
+      <button class="saveBtn"></button>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
