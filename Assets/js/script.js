@@ -6,10 +6,10 @@ var textInput = $('.description');
 var today = moment()
 $('#currentDay').text(today.format('dddd, MMMM Do'));
 
-function textInput(){
-    console.log()
-}
+// function textInput(){
+    console.log(localStorage)
+// }
 
-saveBtn.on('click', function() { textInput() });
+// saveBtn.on('click', function() { textInput() });
 
 
