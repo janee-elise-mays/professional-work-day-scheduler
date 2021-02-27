@@ -1,15 +1,62 @@
-// select the existing DOM element
-var saveBtn = $('#saveBtn');
-var textInput = $('.description');
 
+
+var task9 = localStorage.getItem('9')
+// set the 9 textarea to task9
+
+const currentTime = moment();
+const hourAhead = moment().add(1, 'hour');
+const hourBehind = moment().add(-1,'hour');
+if (hourAhead.hour() > currentTime.hour()) {
+    // add the future class
+   hour =  $('.future');
+}
+else if (hourAhead.hour() < currentTime.hour()) {
+    hour = $('.past');
+}
+else {
+   hour = $('.present');
+}
 // handle displaying the day of the week, month, and date
-var today = moment()
-$('#currentDay').text(today.format('dddd, MMMM Do'));
+$(document).ready(function() {
+    var today = moment();
+    $('#currentDay').text(today.format('dddd, MMMM Do'));
 
-// function textInput(){
-    console.log(localStorage)
-// }
+    var saveBtn = $('.saveBtn');
+    var textInput = $('.description');
 
-// saveBtn.on('click', function() { textInput() });
+    $('.saveBtn').each(function() {
+        var hour = $(this).parent().attr('hour');
+        // grab the localstorage
+        // set the texarea
+        // grab the current time
+        // grab the hour time
+        // compare them with if statements
+    })
 
+    saveBtn.click(function() {
+        var hour = $(this).parent().attr('hour');
+        var task = $(this).prev().val();
+        console.log(hour, task)
+        localStorage.setItem(hour, task);
+    });
+
+    setInterval(function(){
+        console.log(moment().format('H'))
+    },1000)
+
+    const currentTime = moment();
+    const hourAhead = moment().add(1, 'hour');
+    const hourBehind = moment().add(-1,'hour');
+    
+    if (hourAhead.hour() > currentTime.hour()) {
+        // add the future class
+       hour =  $('.future');
+    }
+    else if (hourAhead.hour() < currentTime.hour()) {
+        hour = $('.past');
+    }
+    else {
+       hour = $('.present');
+    }
+});
 
