@@ -1,8 +1,6 @@
 
-
 // handle displaying the day of the week, month, and date
 var today = moment();
-today.subtract(12, "hours")
 $(document).ready(function() {
     $('#currentDay').text(today.format('dddd, MMMM Do'));
 
@@ -38,7 +36,7 @@ $(document).ready(function() {
     }
     setInterval(function(){
         console.log(moment().format('H'))
-        // today = moment().subtract(8, "hours")
+        today = moment()
     },1000)
 });
 
