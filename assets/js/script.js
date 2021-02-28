@@ -9,7 +9,7 @@ $(document).ready(function() {
         var task = $(this).prev().val();
         localStorage.setItem(hour, task);
 
-        // compare them with if statements
+        
     })
     var timeBlocks = $('.time-block')
     for(let i=0; i < timeBlocks.length; i++){
@@ -20,6 +20,7 @@ $(document).ready(function() {
         let perRow = hourlyTimeElement.children[1]
         perRow.textContent = perText
         console.log(parseInt(perHour) < parseInt(moment().format('H')), perHour < moment().format('H'));
+        // compare with if statements to determine block colors
         if(parseInt(perHour) < parseInt(today.format('H'))) {
             $(perRow).attr("class", "col-md-10 description past")
             
