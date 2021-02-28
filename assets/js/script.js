@@ -1,55 +1,44 @@
 
 
-var task9 = localStorage.getItem('9')
-// set the 9 textarea to task9
-
-
-setInterval(function(){
-    console.log(moment().format('H'))
-},1000)
-
-const currentTime = moment();
-const hourAhead = moment().add(1, 'hour');
-const hourBehind = moment().add(-1,'hour');
-
-if (hourAhead.hour() > currentTime.hour()) {
-    // add the future class
-   hour =  $('.future');
-}
-else if (hourAhead.hour() < currentTime.hour()) {
-    hour = $('.past');
-}
-else {
-   hour = $('.present');
-}
 // handle displaying the day of the week, month, and date
+var today = moment();
+today.subtract(12, "hours")
 $(document).ready(function() {
-    var today = moment();
     $('#currentDay').text(today.format('dddd, MMMM Do'));
 
-    var saveBtn = $('.saveBtn');
-    var textInput = $('.description');
-
-    $('.saveBtn').each(function() {
+    $('.saveBtn').click(function() {
         var hour = $(this).parent().attr('data-hour');
-        // grab the localstorage
-        // set the texarea
-        // grab the current time
-        // grab the hour time
+        var task = $(this).prev().val();
+        localStorage.setItem(hour, task);
+
         // compare them with if statements
     })
+    var timeBlocks = $('.time-block')
+    for(let i=0; i < timeBlocks.length; i++){
+        let hourlyTimeElement = timeBlocks[i]
+        console.log(hourlyTimeElement)
+        let perHour = hourlyTimeElement.dataset.hour
+        let perText = localStorage.getItem(perHour)
+        let perRow = hourlyTimeElement.children[1]
+        perRow.textContent = perText
+        console.log(parseInt(perHour) < parseInt(moment().format('H')), perHour < moment().format('H'));
+        if(parseInt(perHour) < parseInt(today.format('H'))) {
+            $(perRow).attr("class", "col-md-10 description past")
+            
+        }
+        else if(parseInt(perHour) === parseInt(today.format('H'))) {
+            $(perRow).attr("class", "col-md-10 description present")
+            
+        }
+        else {
+            $(perRow).attr("class", "col-md-10 description future")
+            
+        }
 
-    saveBtn.click(function(e) {
-        localStorage.setItem('user-input', textInput.value)
-        e.preventDefault()
-        localStorage.getItem(textInput.value)
-    })
-        var hour = $(this).parent().attr('hour');
-        var task = $(this).prev().val();
-        console.log(hour, task)
-        localStorage.setItem(hour, task);
-    });
-
-
+    }
+    setInterval(function(){
+        console.log(moment().format('H'))
+        // today = moment().subtract(8, "hours")
+    },1000)
 });
 
